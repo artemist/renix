@@ -2,6 +2,7 @@ use super::ObjectKind;
 use rnix::value::{remove_common_indent, unescape};
 use std::str::FromStr;
 
+#[derive(PartialEq, Clone, Debug)]
 pub struct NixInteger {
     value: i64,
 }
@@ -22,6 +23,7 @@ impl FromStr for NixInteger {
     }
 }
 
+#[derive(PartialEq, Clone, Debug)]
 pub struct NixFloat {
     value: f64,
 }
@@ -40,6 +42,7 @@ impl FromStr for NixFloat {
     }
 }
 
+#[derive(PartialEq, Clone, Debug)]
 pub struct NixString {
     value: Box<str>,
 }

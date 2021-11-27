@@ -2,6 +2,7 @@ use crate::types::LazyObject;
 use std::collections::HashMap;
 use std::rc::Rc;
 
+#[derive(PartialEq, Clone, Debug)]
 pub struct Context {
     parent: Option<Rc<Context>>,
     objects: HashMap<String, LazyObject>,
